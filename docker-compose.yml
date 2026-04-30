@@ -1,0 +1,8 @@
+services:
+  pathfinder:
+    image: thitiph0n/pathfinder:latest
+    ports:
+      - "3000:80"
+    volumes:
+      - ./config.json:/usr/share/nginx/html/config.json:ro
+    restart: unless-stopped

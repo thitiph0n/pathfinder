@@ -1,0 +1,48 @@
+{
+  "title": "Superi.dev",
+  "groups": [
+    {
+      "name": "DevOps",
+      "icon": "server",
+      "apps": [
+        {
+          "name": "Grafana",
+          "icon": "grafana",
+          "description": "Metrics dashboard",
+          "urls": [
+            { "label": "Dev", "url": "https://grafana.dev.example.com" },
+            { "label": "Staging", "url": "https://grafana.staging.example.com" },
+            { "label": "Prod", "url": "https://grafana.example.com" }
+          ]
+        },
+        {
+          "name": "Portainer",
+          "url": "https://portainer.example.com",
+          "icon": "portainer",
+          "description": "Container management"
+        }
+      ]
+    },
+    {
+      "name": "Media",
+      "icon": "tv-2",
+      "apps": [
+        {
+          "name": "Jellyfin",
+          "url": "https://jellyfin.example.com",
+          "icon": "jellyfin",
+          "description": "Media server"
+        },
+        {
+          "name": "Minio",
+          "icon": "minio",
+          "description": "Object storage",
+          "urls": [
+            { "label": "Dev", "url": "https://minio.dev.example.com" },
+            { "label": "Staging", "url": "https://minio.staging.example.com" }
+          ]
+        }
+      ]
+    }
+  ]
+}
