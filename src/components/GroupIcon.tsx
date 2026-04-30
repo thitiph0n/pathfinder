@@ -1,16 +1,14 @@
 import type { ReactNode } from "react";
-import { lazy, Suspense } from "react";
-
-const IconResolver = lazy(() => import("./IconResolver"));
+import { getIconResolver } from "../iconRegistry.ts";
 
 interface GroupIconProps {
 	icon: string;
 }
 
 export function GroupIcon({ icon }: GroupIconProps): ReactNode {
-	return (
-		<Suspense fallback={<span className="text-2xl">?</span>}>
-			<IconResolver icon={icon} priority="lucide" />
-		</Suspense>
-	);
+	const IconResolver = getIconResolver();
+	if (!IconResolver) {
+		return <div className="w-6 h-6" />;
+	}
+	return <IconResolver icon={icon} priority="lucide" />;
 }
