@@ -12,7 +12,7 @@ export function AppCard({ app }: AppCardProps) {
 	if (isMulti) {
 		return (
 			<div className="card card-bordered bg-base-100">
-				<div className="card-body p-4 gap-2">
+				<div className="card-body p-4 gap-2 items-start">
 					<div className="flex items-center gap-3">
 						<div className="flex-shrink-0">
 							<AppIcon icon={app.icon} />
@@ -22,7 +22,7 @@ export function AppCard({ app }: AppCardProps) {
 					{app.description && (
 						<p className="text-sm opacity-70 line-clamp-2">{app.description}</p>
 					)}
-					<ul className="list">
+					<ul className="list w-full">
 						{app.urls?.map((entry) => (
 							<li key={entry.label} className="list-row items-center py-1">
 								<span className="list-col-grow text-sm">{entry.label}</span>
