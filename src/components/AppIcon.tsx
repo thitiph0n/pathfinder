@@ -1,16 +1,16 @@
-import { Suspense, lazy } from 'react'
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react";
+import { lazy, Suspense } from "react";
 
-const IconResolver = lazy(() => import('./IconResolver'))
+const IconResolver = lazy(() => import("./IconResolver"));
 
 interface AppIconProps {
-  icon: string
+	icon: string;
 }
 
 export function AppIcon({ icon }: AppIconProps): ReactNode {
-  return (
-    <Suspense fallback={<span className="text-2xl">?</span>}>
-      <IconResolver icon={icon} priority="simple-icons" />
-    </Suspense>
-  )
+	return (
+		<Suspense fallback={<span className="text-2xl">?</span>}>
+			<IconResolver icon={icon} priority="simple-icons" />
+		</Suspense>
+	);
 }
